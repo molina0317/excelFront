@@ -21,7 +21,7 @@ const Grid = () => {
         }
 
         try {
-            const res = await axios.get("http://localhost:5000/api/grid/grid", {
+            const res = await axios.get("https://excel-backend-tonys-projects-26d88fe1.vercel.app/api/grid/grid", {
                 headers: { Authorization: `Bearer ${token}` },
             });
 
@@ -56,7 +56,7 @@ const Grid = () => {
 
             try {
                 await axios.post(
-                    "http://localhost:5000/api/grid/upload",
+                    "https://excel-backend-tonys-projects-26d88fe1.vercel.app/api/grid/upload",
                     { data: formattedData, mergedCells: mergedCellsData },
                     { headers: { Authorization: `Bearer ${token}` } }
                 );
@@ -136,7 +136,7 @@ const Grid = () => {
 
         try {
             await axios.post(
-                "http://localhost:5000/api/grid/update",
+                "https://excel-backend-tonys-projects-26d88fe1.vercel.app/api/grid/update",
                 { data: updatedData, mergedCells: updatedMergedCells },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
